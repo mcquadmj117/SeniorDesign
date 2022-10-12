@@ -1,0 +1,12 @@
+ip = '192.24.133.164'
+username = 'mmcqu'
+password = '8008'
+import sys, wmi
+from socket import *
+
+try:
+    print("Trying to connect %s" %ip)
+    wmi.WMI(ip, user=username,password = password)
+    print('connected')
+
+except Exception as e: print(e)
